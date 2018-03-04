@@ -1,0 +1,145 @@
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+	<style>
+		head {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Rubik, "Helvetica Neue", Helvetica, sans-serif;
+		}
+
+		#toolbar {
+			height: 80px;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			background-color: #fafafa;
+			border-top: #dadcdf 1px solid;
+			display: flex;
+			align-items: center;
+		}
+
+		#toolbar button {
+			border: none;
+			background: transparent;
+			background-image: none;
+			flex-grow: 0;
+			outline: none; /* Alas, this prototype is already totally inaccessible. */
+			font-family: inherit;
+		}
+
+		#toolbar button:active {
+			opacity: 0.5;
+		}
+
+		#toolbar button img {
+			user-select: none;
+			-webkit-user-drag: none;
+			user-drag: none;
+		}
+
+		.title {
+			text-align: center;
+			flex-grow: 1;
+			font-weight: 500;
+			font-size: 22;
+			margin: 0;
+		}
+
+		.stack {
+			justify-content: center;
+			display: flex;
+			flex-direction: column;
+			padding: 0 20px;
+		}
+
+		.stack:first-of-type {
+			margin-left: 10px;
+		}
+
+		.stack:last-of-type {
+			margin-right: 10px;
+		}
+
+		.stack img {
+			margin: 0 auto;
+			height: 30px;
+		}
+
+		.stack p,
+		.stack label {
+			margin: 0;
+			margin-top: 6px;
+			text-align: center;
+			width: 100%;
+			font-size: 14;
+		}
+
+		#toolbar .selectContainer {
+			height: 30px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			width: 130px;
+		}
+
+		#loading {
+			display: flex;
+			align-items: center;
+			background-color: #00000030;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: opacity 0.5s;
+			pointer-events: none;
+		}
+
+		#loading p {
+			margin: 0 auto;
+			font-size: 32;
+		}
+	</style>
+	<script language="javascript" type="text/javascript" src="https://storage.googleapis.com/scrying-pen-models/cat-flat.js"></script>
+	<script language="javascript" type="text/javascript" src="lib/p5.min.js"></script>
+	<script language="javascript" type="text/javascript" src="lib/deeplearn.js"></script>
+	<script language="javascript" type="text/javascript" src="lib/sketch_rnn.js"></script>
+	<script language="javascript" type="text/javascript" src="index.js"></script>
+
+</head>
+
+<body>
+	<div id="sketch" style="cursor: crosshair;"></div>
+	<div id="loading"><p>Loading…</p></div>
+	<div id="toolbar">
+		<button class="stack" id="clearButton">
+			<img src="img/clear.png" />
+			<p>Clear</p>
+		</button>
+		<button class="stack" onclick="window.open('https://github.com/andymatuschak/scrying-pen/blob/master/README.md', '_blank');">
+			<img src="img/info.png" />
+			<p>About</p>
+		</button>
+		<p class="title">Scrying Pen</p>
+		<div class="stack">
+			<div class="selectContainer">
+				<select id="model">
+				</select>
+			</div>
+			<label for="model">
+				Model
+			</label>
+		</div>
+	</div>
+</body>
+
+</html>
