@@ -471,6 +471,7 @@ const sketch = function (p) {
       if (lastMouseState === null) { // first time anything is written
         startingMouseState = mouseState;
         lastMouseState = mouseState;
+        document.getElementById("hint").style.opacity = 0;
       }
 
       // Have we moved far enough to bother drawing anything?

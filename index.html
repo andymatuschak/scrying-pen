@@ -91,10 +91,10 @@
 			width: 130px;
 		}
 
-		#loading {
+		#loading, #hint {
 			display: flex;
 			align-items: center;
-			background-color: #00000030;
+			background-color: #aaa;
 			width: 100%;
 			height: 100%;
 			position: absolute;
@@ -104,7 +104,12 @@
 			pointer-events: none;
 		}
 
-		#loading p {
+		#hint {
+			background-color: transparent;
+			color: #ddd;
+		}
+
+		#loading p, #hint p {
 			margin: 0 auto;
 			font-size: 32;
 		}
@@ -119,6 +124,7 @@
 
 <body>
 	<div id="sketch" style="cursor: crosshair;"></div>
+	<div id="hint"><p>Draw here!</p></div>
 	<div id="loading"><p>Loading…</p></div>
 	<div id="toolbar">
 		<button class="stack" id="clearButton">
