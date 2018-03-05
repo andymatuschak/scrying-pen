@@ -21,3 +21,5 @@ I'm excited about applications of machine learning to human augmentation—as op
 I'm grateful to David Ha, Douglas Eck, and their team for their great work with SketchRNN. The paper's wonderful to read; the models from Quick, Draw! are a great resource to the community; the demo implementations were a very helpful reference.
 
 I'm also grateful to Michael Nielsen, Robert Ochshorn, and M Eifler for useful conversations about this project.
+
+Thanks also to the [OpenAI Hackathon](https://blog.openai.com/hackathon/) for providing a nice venue for polishing the last bits of this project up.
