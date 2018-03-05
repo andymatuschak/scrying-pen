@@ -210,7 +210,12 @@ const sketch = function (p) {
   }
 
   const setIsLoading = function (isLoadingState) {
-    document.getElementById("loading").style.opacity = isLoadingState ? 1 : 0;
+    const loadingElement = document.getElementById("loading");
+    if (/Safari/.test(window.navigator.userAgent) && !/Chrome/.test(window.navigator.userAgent)) {
+      loadingElement.innerHTML = "<p>Alas, Safari is unsupported; try Chrome?</p>"
+    } else {
+      document.getElementById("loading").style.opacity = isLoadingState ? 1 : 0;
+    }
   }
 
   let lastHallucinationStartPoint = null;
