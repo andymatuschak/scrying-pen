@@ -12,8 +12,6 @@ Let it guide your hand, or not, while you draw. Enjoy the gentle interplay betwe
 
 ## Background
 
-[I'll be writing more about the background of this project before talking about it broadly; a brief sketch follows:]
-
 I'm excited about applications of machine learning to human augmentation—as opposed to automating tedious work or solving number-crunching problems. I believe effective media for human augmentation require feedback loops tight enough to work at the speed of thought. All that is to say: I'm interested in what happens when we take complex operations and make them interactive in real-time.
 
 ## Thanks
